@@ -7,7 +7,8 @@
 #include "Player.hh"  // Assume Player header is properly defined
 #include "Ball.hh"    // Assume Ball header is properly defined
 
-class Field {
+class Field 
+{
 public:
     // Constructor
     Field(int width, int height);
@@ -37,10 +38,10 @@ public:
     void setBall(const Ball& newBall);
 
 private:
-    int width;
-    int height;
-    std::vector<Player> players;        // Holds players
-    std::unique_ptr<Ball> ball;         // Unique ownership of ball
+    int width_;
+    int height_;
+    std::vector<Player> players_;        // Holds players
+    std::unique_ptr<Ball> ball_;         // Unique ownership of ball
 };
 
 #endif // FIELD_H

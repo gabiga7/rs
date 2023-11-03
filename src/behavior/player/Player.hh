@@ -3,44 +3,57 @@
 
 // Include necessary headers here
 #include <string>
-#include "Position.hh"
+#include "../position/Position.hh"
+#include "../team/Team.hh"
 
-// Forward declaration of Terrain if Player needs to interact with Terrain objects
-class Terrain;
+// Forward declaration of Field if Player needs to interact with Field objects
+class Field;
 
-class Player 
-{
+class Player {
 public:
     // Constructor
-    Player(Terrain* terrain, Position position, const std::string& name, int number);
+    Player(Field* field, Team team, Position position, const std::string& name, int number);
 
     // Destructor
     ~Player();
 
-    // Copy constructor and copy assignment operator
+    // Copy constructor
     Player(const Player& other);
+
+    // Copy assignment operator
     Player& operator=(const Player& other);
 
-    // Member functions
-    void move(int x, int y); // Moves the player to a new position on the terrain
-    void pass(Player& target); // Pass the ball to another player
+    // Move the player to a new position on the field
+    void move(const Position& newPosition);
 
-    // Getters and setters as needed
+    // Pass the ball to another player
+    void pass(Player& target);
+
+    // Getters
+    Field* getField() const;
+    Team getTeam() const;
     Position getPosition() const;
     std::string getName() const;
     int getNumber() const;
-    // ... More getters and setters
 
-    // Additional player behaviors
-    void tackle(Player& target); // Tackle another player
-    // ... Other actions
+    // Setters
+    void setField(Field* newField);
+    void setTeam(Team newTeam);
+    void setPosition(const Position& newPosition);
+    void setName(const std::string& newName);
+    void setNumber(int newNumber);
+
+    // Tackle another player
+    void tackle(Player& target);
+
+    // Other actions (to be defined)
+    // ...
 
 private:
-    // Member variables
-    Terrain* terrain; // Raw pointer is sufficient if Terrain owns Player
-    Position position;
-    std::string name;
-    int number;
+    Field* field_;  // Non-owning pointer to the Field
+    Team team_;
+    Position position_;
+    std::string name_;
+    int number_;
 };
-
 #endif // PLAYER_HH

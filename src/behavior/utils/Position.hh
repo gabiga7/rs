@@ -16,8 +16,8 @@ public:
     void setY(int new_y);
 
 private:
-    int x;
-    int y;
+    int x_;
+    int y_;
 }
 
 #endif // POSITION_HH

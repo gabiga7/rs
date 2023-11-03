@@ -3,6 +3,6 @@
 // Constructor 
 Position::Position(int x, int y)
     :
-    x(x),
-    y(y)
+    x_(x),
+    y_(y)
     {}
