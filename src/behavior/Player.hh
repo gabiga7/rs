@@ -1,3 +1,5 @@
+# pragma once
+
 # Simulation de Rugby 2D
 
 ## Description
@@ -5,6 +7,9 @@ Simulation de Rugby 2D est un logiciel de simulation de match de rugby en vue de
 
 ## Technologies
 - C++
+- [SFML](https://www.sfml-dev.org/)
+- [Box2D](https://box2d.org/)
+- [ImGui](https://github.com/ocornut/imgui) (pour le débogage et les outils de développement)
 
 ## Installation
 *(Les instructions d'installation seront ajoutées lorsque le projet aura plus de substance.)*
@@ -19,7 +24,7 @@ Nous accueillons toute contribution au projet. Veuillez lire `CONTRIBUTING.md` (
 Ce projet est sous licence XYZ. Voir le fichier `LICENSE` (à ajouter) pour les détails.
 
 ## Auteurs et Remerciements
-Ce projet est développé par GitEnjoyer-RandomNumberThatNoOneUsed et gabiga7 avec des contributions de la communauté de développement open source.
+Ce projet est développé par [Votre Nom] avec des contributions de la communauté de développement open source.
 
 ## État du projet
 Ce projet est actuellement en phase de conception initiale. Les fonctionnalités suivantes sont en cours de développement:
