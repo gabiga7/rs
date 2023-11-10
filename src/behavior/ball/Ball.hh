@@ -1,7 +1,7 @@
 #ifndef BALL_HH
 #define BALL_HH
 
-#include "../position/Position.hh"
+#include "../utils/Position.hh"
 #include "../field/Field.hh"
 
 class Ball

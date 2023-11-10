@@ -4,7 +4,7 @@
 // Constructor implementation
 Player::Player(Field* field, Team team, Position position, const std::string& name, int number)
     : 
-    field(field), 
+    field_(field), 
     team_(team), 
     position_(position), 
     name_(name), 
@@ -14,7 +14,7 @@ Player::Player(Field* field, Team team, Position position, const std::string& na
 // Copy constructor implementation
 Player::Player(const Player& other)
     : 
-    field_(other.field), 
+    field_(other.field_), 
     team_(other.team_), 
     position_(other.position_), 
     name_(other.name_), 
@@ -22,11 +22,11 @@ Player::Player(const Player& other)
 {}
 
 // Copy assignment operator implementation
-Player& Player::operator=(const Player& other) 
+Player::Player& Player::operator=(const Player& other) 
 {
     if (this != &other) 
     {
-        field_ = other.field;
+        field_ = other.field_;
         team_ = other.team_;
         position_ = other.position_;
         name_ = other.name_;

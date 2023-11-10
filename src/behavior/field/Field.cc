@@ -1,23 +1,23 @@
 #include "Field.hh"
 
 // Constructor
-Field::Field(int width, int height)
+Field::Field(int width_, int height_)
     :
-    width(width),
-    height(height),
-    ball(nullptr)
+    width_(width_),
+    height_(height_),
+    ball_(nullptr)
 {}
 
 // Copy constructor
 Field::Field(const Field& other)
     :
-    width(other.width),
-    height(other.height),
+    width_(other.width_),
+    height_(other.height_),
     players(other.players)
 {
-    if (other.ball)
+    if (other.ball_)
     {
-        ball = std::make_unique<Ball>(*other.ball);
+        ball_ = std::make_unique<Ball>(*other.ball_);
     }
 }
 
@@ -25,10 +25,10 @@ Field& Field::operator=(const Field& other)
 {
     if (this != &other)
     {
-        width = other.width;
-        height = other.height;
+        width_ = other.width_;
+        height_ = other.height_;
         players = other.players;
-        ball = other.ball ? std::make_unique<Ball>(*other.ball) : nullptr;
+        ball_ = other.ball_ ? std::make_unique<Ball>(*other.ball_) : nullptr;
     }
     return *this;
 }

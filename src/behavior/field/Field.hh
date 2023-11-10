@@ -4,7 +4,7 @@
 #include <vector>
 #include <memory>
 #include <algorithm>
-#include "Player.hh"  // Assume Player header is properly defined
+#include "../player/Player.hh"  // Assume Player header is properly defined
 #include "Ball.hh"    // Assume Ball header is properly defined
 
 class Field 

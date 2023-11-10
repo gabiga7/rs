@@ -3,7 +3,7 @@
 
 // Include necessary headers here
 #include <string>
-#include "../position/Position.hh"
+#include "../utils/Position.hh"
 #include "../team/Team.hh"
 
 // Forward declaration of Field if Player needs to interact with Field objects
